@@ -68,7 +68,7 @@ ESLint Setup For React
 
 <br/>
 
-- Create  `.vscode>settings.json` file and enter the bellow contents
+- Create  `.vscode>settings.json` file in project root folder and enter the bellow contents
 
 ```json
 {
