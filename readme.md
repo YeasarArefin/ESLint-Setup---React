@@ -66,6 +66,7 @@ ESLint Setup For React
     ]
   },
   "plugins": ["prettier", "react", "react-hooks"]
+}
 ```
 
 <br/>
