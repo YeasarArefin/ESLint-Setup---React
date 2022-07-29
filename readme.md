@@ -74,7 +74,6 @@ ESLint Setup For React
 
 ```json
 {
-  // config related to code formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -85,7 +84,7 @@ ESLint Setup For React
     "editor.formatOnSave": false,
     "editor.defaultFormatter": null
   },
-  "javascript.validate.enable": false, //disable all built-in syntax checking
+  "javascript.validate.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.tslint": true,
