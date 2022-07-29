@@ -67,9 +67,10 @@ ESLint Setup For React
   },
   "plugins": ["prettier", "react", "react-hooks"]
 ```
-<br/>
-- Create  `.vscode>settings.json` file and enter the bellow contents
 
+<br/>
+
+- Create  `.vscode>settings.json` file and enter the bellow contents
 
 ```json
 {
