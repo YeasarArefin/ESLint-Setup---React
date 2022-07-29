@@ -6,7 +6,9 @@ ESLint Setup For React
 
 - Add `lint` script in `package.json`
 
-`"lint": "yarn add -D prettier && yarn add -D babel-eslint && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"`
+```json
+"lint": "yarn add -D prettier && yarn add -D babel-eslint && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
+```
 
 <br/>
 
@@ -14,6 +16,7 @@ ESLint Setup For React
 `$ yarn lint`
 
 <br/>
+
 - Create a `.eslintrc` file in the project root and enter the below contents:
 
 ```json
