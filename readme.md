@@ -7,7 +7,7 @@ ESLint Setup For React
 - Add `lint` script in `package.json`
 
 ```json
-"lint": "yarn add -D prettier && yarn add -D babel-eslint && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
+"lint": "yarn add -D prettier && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
 ```
 
 <br/>
