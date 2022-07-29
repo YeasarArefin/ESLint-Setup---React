@@ -28,10 +28,6 @@ ESLint Setup For React
     "prettier",
     "plugin:jsx-a11y/recommended"
   ],
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 8
-  },
   "env": {
     "browser": true,
     "node": true,
@@ -67,6 +63,7 @@ ESLint Setup For React
   },
   "plugins": ["prettier", "react", "react-hooks"]
 }
+
 ```
 
 <br/>
