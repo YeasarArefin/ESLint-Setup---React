@@ -7,7 +7,7 @@ ESLint Setup For React
 - Add `lint` script in `package.json`
 
 ```json
-"lint": "yarn add -D prettier && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
+"lint": "yarn add -D prettier && yarn add -D @babel/eslint-parser && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
 ```
 
 <br/>
@@ -21,6 +21,24 @@ ESLint Setup For React
 
 ```json
 {
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    // "parser": "@babel/eslint-parser",
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": ["jsx"]
+      }
+    },
+
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
   "extends": [
     "airbnb",
     "airbnb/hooks",
@@ -43,6 +61,10 @@ ESLint Setup For React
     "linebreak-style": 0,
     "react/prop-types": 0,
     "jsx-a11y/click-events-have-key-events": 0,
+    "no-unused-vars": "off",
+    "no-shadow": "off",
+    "arrow-body-style": "off",
+    "global-require": 0,
     "react/jsx-filename-extension": [
       1,
       {
@@ -59,11 +81,17 @@ ESLint Setup For React
         "semi": true,
         "endOfLine": "auto"
       }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": ["arrow-function", "function-declaration"],
+        "unnamedComponents": "arrow-function"
+      }
     ]
   },
   "plugins": ["prettier", "react", "react-hooks"]
 }
-
 ```
 
 <br/>
