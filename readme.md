@@ -4,16 +4,11 @@ ESLint Setup For React
 
 <br/>
 
-- Add `lint` script in `package.json`
+- Install The Packages
 
-```json
-"lint": "yarn add -D prettier && yarn add -D @babel/eslint-parser && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
+```sh $ 
+yarn add -D eslint eslint-plugin-react eslint-config-airbnb@latest eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react-hooks prettier eslint-config-prettier eslint-plugin-prettier
 ```
-
-<br/>
-
-- Run lint script 
-`$ yarn lint`
 
 <br/>
 
@@ -21,23 +16,9 @@ ESLint Setup For React
 
 ```json
 {
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    // "parser": "@babel/eslint-parser",
-    "babelOptions": {
-      "parserOpts": {
-        "plugins": ["jsx"]
-      }
-    },
-
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "requireConfigFile": false,
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true,
-      "experimentalObjectRestSpread": true
-    }
+  "env": {
+    "browser": true,
+    "es2021": true
   },
   "extends": [
     "airbnb",
@@ -46,12 +27,12 @@ ESLint Setup For React
     "prettier",
     "plugin:jsx-a11y/recommended"
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-    "jest": true
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
+  "plugins": ["prettier", "react", "react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": "error",
@@ -89,9 +70,9 @@ ESLint Setup For React
         "unnamedComponents": "arrow-function"
       }
     ]
-  },
-  "plugins": ["prettier", "react", "react-hooks"]
+  }
 }
+
 ```
 
 <br/>
